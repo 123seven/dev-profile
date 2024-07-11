@@ -24,7 +24,7 @@ export const DATA = {
     "Java",
   ],
   contact: {
-    email: "steven.zhu.email@gmail.com",
+    email: "mailto:steven.zhu.email@gmail.com",
     tel: "",
     social: {
       GitHub: {
@@ -32,17 +32,17 @@ export const DATA = {
         icon: Icons.github,
       },
       Gmail: {
-        url: "https://www.linkedin.com/in/stevenju/",
+        url: "mailto:steven.zhu.email@gmail.com",
         icon: Icons.gmail,
       },
-      X: {
-        url: "https://x.com/stevenju",
-        icon: Icons.x,
-      },
-      Youtube: {
-        url: "https://youtube.com/c/stevenju",
-        icon: Icons.youtube,
-      },
+      // X: {
+      //   url: "https://x.com/stevenju",
+      //   icon: Icons.x,
+      // },
+      // Youtube: {
+      //   url: "https://youtube.com/c/stevenju",
+      //   icon: Icons.youtube,
+      // },
     },
   },
 
@@ -51,7 +51,7 @@ export const DATA = {
   projects: [
     {
       title: "BestFit AI",
-      href: "https://BestFitAI.com",
+      href: "https://bestfitai.vercel.app",
       dates: "June 2024 - July 2024",
       active: true,
       description:
@@ -69,17 +69,16 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://BestFitAI.com",
+          href: "https://bestfitai.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+      video: "/bestfitai.mp4",
     },
     {
       title: "UseFast",
-      href: "https://UseFast.top",
+      href: "https://usefast.vercel.app",
       dates: "May 2024 - June 2024",
       active: true,
       description:
@@ -96,38 +95,36 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://UseFast.top",
+          href: "https://usefast.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      video: "/usefa.mp4",
     },
     {
-      title: "BestPyAuth",
-      href: "https://llm.report",
+      title: "Poke",
+      href: "",
       dates: "July 2023 - September 2023",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-      technologies: ["Typescript", "TailwindCSS", "Python", "FastAPI"],
-      links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
+        "Easy, Simple, and Efficient Integrated Authentication and User Management Features.",
+      technologies: [
+        "Typescript",
+        "React",
+        "TailwindCSS",
+        "Headlessui/",
+        "Python",
+        "FastAPI",
+        "SQLite3",
+        "Docker",
       ],
+      links: [],
       image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      video: "/poke.mp4",
     },
     {
-      title: "SmartChat",
+      title: "OpenChat",
       href: "open-chat-beta.vercel.app",
       dates: "February 2023 - March 2023",
       active: true,
@@ -145,13 +142,18 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "open-chat-beta.vercel.app",
+          href: "https://open-chat-beta.vercel.app",
           icon: <Icons.globe className="size-3" />,
         },
+        {
+          type: "Source",
+          href: "https://github.com/123seven/SmartChat-Beta",
+          icon: <Icons.github className="size-3" />,
+        },
       ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+
+      image: "/openchat.jpg",
+      video: "",
     },
   ],
   hackathons: [],
