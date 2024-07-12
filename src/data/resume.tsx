@@ -52,7 +52,7 @@ export const DATA = {
     {
       title: "BestFit AI",
       href: "https://bestfitai.vercel.app",
-      dates: "June 2024 - July 2024",
+      dates: "June 2024 - Today",
       active: true,
       description:
         "Discover BestFitAI, the ultimate AI-powered fitness companion. Get personalized workout plans, real-time guidance, and adaptive training programs tailored to your goals. Experience the future of fitness with our smart, digital personal trainer.",
@@ -61,10 +61,13 @@ export const DATA = {
         "React",
         "Shadcn UI",
         "Typescript",
-        "PostgreSQL",
+        "Supabase",
         "TailwindCSS",
         "Cloudflare Workers",
         "Python",
+        "ChatGPT",
+        "Dify",
+        "LLM",
       ],
       links: [
         {
