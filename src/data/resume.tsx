@@ -50,6 +50,34 @@ export const DATA = {
   education: [],
   projects: [
     {
+      title: "i18n",
+      href: "https://i18n.usefa.top",
+      dates: "July 2024 - Today",
+      active: true,
+      description:
+        "Powered by AI Localization has never been easier. enhance internationalization efficiency with precise translations, expand the business to all parts of the world.",
+      technologies: [
+        "Next.js",
+        "React",
+        "Shadcn UI",
+        "Typescript",
+        "Supabase",
+        "TailwindCSS",
+        "VercelAI",
+        "NextAuth",
+        "Serverless",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://i18n.usefa.top",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/i18n.jpg",
+      video: "",
+    },
+    {
       title: "BestFit AI",
       href: "https://bestfitai.vercel.app",
       dates: "June 2024 - Today",
@@ -116,7 +144,7 @@ export const DATA = {
         "Typescript",
         "React",
         "TailwindCSS",
-        "Headlessui/",
+        "HeadlessUI",
         "Python",
         "FastAPI",
         "SQLite3",
@@ -128,7 +156,7 @@ export const DATA = {
     },
     {
       title: "OpenChat",
-      href: "open-chat-beta.vercel.app",
+      href: "https://open-chat-beta.vercel.app",
       dates: "February 2023 - March 2023",
       active: true,
       description: "A ChatGPT chat client implemented in Vue3 & FastAPI",
