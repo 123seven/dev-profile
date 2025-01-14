@@ -46,7 +46,7 @@ export function ProjectCard({
       }
     >
       <Link
-        href={href || "#"}
+        href={href ? `/projects/${title.toLowerCase()}` : "#"}
         className={cn("block cursor-pointer", className)}
       >
         {video && (

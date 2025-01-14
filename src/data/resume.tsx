@@ -1,5 +1,23 @@
 import { Icons } from "@/components/icons";
 
+type Project = {
+  title: string;
+  href: string;
+  dates: string;
+  active: boolean;
+  description: string;
+  technologies: readonly string[];
+  links?: readonly {
+    type: string;
+    href: string;
+    icon: React.ReactNode;
+  }[];
+  features?: readonly string[];
+  image?: string;
+  screenshots?: readonly string[];
+  video?: string;
+};
+
 export const DATA = {
   name: "Steven Ju",
   initials: "SJ",
@@ -186,6 +204,33 @@ export const DATA = {
       image: "/openchat.jpg",
       video: "",
     },
-  ],
+    {
+      title: "Subs",
+      href: "/projects/subs",
+      dates: "December 2024 - January 2025",
+      active: true,
+      description:
+        "Stay in control of your subscriptions like never before! Our app allows you to visualize your subscription payments through a clear calendar view, track your subscription history, and get detailed statistics on your expenses. With a built-in list of common subscriptions and the ability to add custom ones, managing your subscriptions has never been easier. Say goodbye to unexpected charges and hello to financial peace of mind.",
+      technologies: ["SwiftUI", "Swift", "CoreData", "Combine", "UIKit"],
+      links: [
+        {
+          type: "Apple App Store",
+          href: "https://apps.apple.com/us/app/subs-manage-your-subscriptions/id6472188882",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      features: [
+        "Subscription expiration reminders",
+        "Subscription history tracking",
+      ],
+      image: "/subs.png",
+      screenshots: [
+        "/subs-screenshot-1.png",
+        "/subs-screenshot-2.png",
+        "/subs-screenshot-3.png",
+      ],
+      video: "",
+    },
+  ] as const satisfies readonly Project[],
   hackathons: [],
 } as const;
