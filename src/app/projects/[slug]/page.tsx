@@ -5,11 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-export default function ProjectPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = DATA.projects.find(
     (p) => p.title.toLowerCase() === params.slug.toLowerCase()
   );
@@ -22,8 +18,8 @@ export default function ProjectPage({
     <main className="min-h-screen">
       <div className="container max-w-[1400px] mx-auto px-6 py-12">
         <div className="mb-12">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="group inline-flex items-center rounded-full bg-secondary px-4 py-2 text-sm text-muted-foreground transition-colors hover:text-primary"
           >
             <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
@@ -53,14 +49,57 @@ export default function ProjectPage({
             />
           </div>
         )}
-        
+
         <div className="max-w-3xl">
           <div className="space-y-6">
             <div>
-              <h1 className="text-4xl font-bold tracking-tight">{project.title}</h1>
-              <p className="mt-2 text-lg text-muted-foreground">{project.dates}</p>
+              <h1 className="text-4xl font-bold tracking-tight">
+                {project.title}
+              </h1>
+              <p className="mt-2 text-lg text-muted-foreground">
+                {project.dates}
+              </p>
             </div>
-            
+
+            {/* Quick Navigation */}
+            <div className="flex flex-wrap gap-2 py-4">
+              <a 
+                href="#tech-stack" 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Tech Stack
+              </a>
+              {project.features && (
+                <>
+                  <span className="text-muted-foreground">•</span>
+                  <a 
+                    href="#key-features" 
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Key Features
+                  </a>
+                </>
+              )}
+              <span className="text-muted-foreground">•</span>
+              <a 
+                href="#privacy-policy" 
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Privacy Policy
+              </a>
+              {project.screenshots && (
+                <>
+                  <span className="text-muted-foreground">•</span>
+                  <a 
+                    href="#screenshots" 
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Screenshots
+                  </a>
+                </>
+              )}
+            </div>
+
             <p className="text-lg leading-relaxed">{project.description}</p>
 
             {project.links && project.links.length > 0 && (
@@ -78,13 +117,15 @@ export default function ProjectPage({
                 ))}
               </div>
             )}
-            
-            <div>
-              <h2 className="mb-3 text-2xl font-semibold tracking-tight">Tech Stack</h2>
+
+            <div id="tech-stack">
+              <h2 className="mb-3 text-2xl font-semibold tracking-tight">
+                Tech Stack
+              </h2>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
-                  <Badge 
-                    key={tech} 
+                  <Badge
+                    key={tech}
                     variant="secondary"
                     className="px-3 py-1 text-sm font-medium"
                   >
@@ -95,12 +136,14 @@ export default function ProjectPage({
             </div>
 
             {project.features && (
-              <div>
-                <h2 className="mb-3 text-2xl font-semibold tracking-tight">Key Features</h2>
+              <div id="key-features">
+                <h2 className="mb-3 text-2xl font-semibold tracking-tight">
+                  Key Features
+                </h2>
                 <ul className="space-y-2">
                   {project.features.map((feature, index) => (
-                    <li 
-                      key={index} 
+                    <li
+                      key={index}
                       className="flex items-start text-muted-foreground"
                     >
                       <span className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-primary"></span>
@@ -110,13 +153,32 @@ export default function ProjectPage({
                 </ul>
               </div>
             )}
+
+            <div id="privacy-policy" className="space-y-6">
+              <h2 className="text-2xl font-semibold tracking-tight">
+                Privacy Policy
+              </h2>
+
+              <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+                <h3 className="text-lg font-semibold mb-2">
+                  No Data Collection
+                </h3>
+                <p className="text-muted-foreground">
+                  This app does not collect any personal data. The developer
+                  does not gather any information from users of this
+                  application.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Screenshots */}
         {project.screenshots && (
-          <div className="mt-16">
-            <h2 className="mb-6 text-2xl font-semibold tracking-tight">Screenshots</h2>
+          <div id="screenshots" className="mt-16">
+            <h2 className="mb-6 text-2xl font-semibold tracking-tight">
+              Screenshots
+            </h2>
             <div className="relative">
               <div className="flex space-x-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-track-transparent scrollbar-thumb-secondary">
                 {project.screenshots.map((screenshot, index) => (
@@ -135,4 +197,4 @@ export default function ProjectPage({
       </div>
     </main>
   );
-} 
+}

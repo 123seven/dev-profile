@@ -16,6 +16,7 @@ type Project = {
   image?: string;
   screenshots?: readonly string[];
   video?: string;
+  privacyPolicy?: string;
 };
 
 export const DATA = {
